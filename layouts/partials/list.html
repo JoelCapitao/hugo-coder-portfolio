@@ -1,7 +1,9 @@
 <section class="container list">
   {{ range .Paginator.Pages }}
   <article class="article">
-    <img src="{{ .Params.thumbnail }}" class="attachment-article-post-thumbnail">
+    <a href="{{ .Permalink }}">
+      <img src="{{ .Params.thumbnail }}" class="attachment-article-post-thumbnail">
+    </a>
     <h2>
       <a class="article_title" href="{{ .Permalink  }}" title="{{ .Title  }}">{{ .Title  }}</a>
     </h2>
@@ -9,7 +11,9 @@
       <a href="{{ .Permalink  }}" title="{{ .Title }}">{{ .Date.Format "Jan 2, 2006" }}</a>
     </div>
     {{ .Summary }}
-    ...<a href="{{ .Permalink  }}" title="{{ .Title }}">read more</a>
+    {{ if .Truncated  }}
+    <a href="{{ .Permalink  }}" title="{{ .Title }}">Read more...</a>
+    {{ end  }}
   </article>
   {{ end }}
   {{ partial "pagination.html" . }}
