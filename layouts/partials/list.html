@@ -1,12 +1,14 @@
 <section class="container list">
   {{ range .Paginator.Pages }}
-  <article>
+  <article class="article">
     <div>
     <img src="{{ .Params.thumbnail }}" class="attachment-article-post-thumbnail">
-    <h2><a href="{{ .Permalink  }}" title="{{ .Title  }}">{{ .Title  }}</a></h2>
+    <h2>
+      <a class="article_title" href="{{ .Permalink  }}" title="{{ .Title  }}">{{ .Title  }}</a>
+    </h2>
     </div>
     <div class="time">
-      <a href="{{ .Permalink  }}" title="{{ .Title }}">{{ .Date.Format "Monday, January 2, 2006" }}</a>
+      <a href="{{ .Permalink  }}" title="{{ .Title }}">{{ .Date.Format "Jan 2, 2006" }}</a>
     </div>
     {{ .Summary }}
   </article>

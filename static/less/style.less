@@ -80,6 +80,10 @@ h2 {
   }
 }
 
+h2 a.article_title {
+  color: #3a3a3a;
+}
+
 h3 {
   font-size: 2.4rem;
   line-height: 2.4rem;
@@ -171,6 +175,10 @@ img.attachment-article-post-thumbnail {
   height: 4.5em;
   width: 7.5em;
   margin: -2px 1em 0 0;
+}
+
+.article a.article_title {
+  text-decoration: none
 }
 
 .time {
@@ -474,33 +482,6 @@ img.attachment-article-post-thumbnail {
 a {
   position: relative;
   transition: 0.5s;
-}
-
-a:before, a:after {
-  position: absolute;
-  bottom: -2px;
-  content: "";
-  display: inline-block;
-  width: 0;
-  height: 2px;
-  background: #F30034;
-  transition: 0.5s;
-}
-
-a:before {
-  left: 50%;
-}
-
-a:after {
-  right: 50%;
-}
-
-a:hover {
-  text-decoration: none;
-}
-
-a:hover:before, a:hover:after {
-  width: 50%;
 }
 
 .private {
