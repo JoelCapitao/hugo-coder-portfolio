@@ -28,12 +28,12 @@ body {
 
 a {
   font-weight: 700;
-  color: #EE4939;
+  color: rgba(0,0,0,0.4);
   text-decoration: none;
   transition: color 0.2s ease-out;
   &:focus,
   &:hover {
-    color: #A8291C;
+    color: @link-color;
   }
 }
 
@@ -191,11 +191,7 @@ img.attachment-article-post-thumbnail {
 }
 
 .time a {
-  color: rgba(0,0,0,0.4);
   font-style: italic;
-  &:hover {
-    color: #3962EE;
-  }
 }
 
 .wrapper {
