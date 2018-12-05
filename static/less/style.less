@@ -6,23 +6,29 @@
   box-sizing: inherit;
 }
 
-html {
-  box-sizing: border-box;
-  font-size: 62.5%;
-}
-
 body {
   display: flex;
   color: @fg-color;
   background-color: @bg-color;
   font-family: 'colfax-web', sans-serif;
-  font-size: 2.4em;
+  font-size: 100%;
   font-weight: 400;
   letter-spacing: 0.0625em;
   line-height: 1.8em;
-  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-    font-size: 1.4em;
-    line-height: 1.6em;
+  @media only screen and (min-device-width: 600px) {
+    font-size: 118.8%;
+  }
+  @media only screen and (min-device-width: 800px) {
+    font-size: 131.3%;
+  }
+  @media only screen and (min-device-width: 1030px) {
+    font-size: 137.5%;
+  }
+  @media only screen and (min-device-width: 1250px) {
+    font-size: 143.8%;
+  }
+  @media only screen and (min-device-width: 1400px) {
+    font-size: 1.563em;
   }
 }
 
@@ -35,6 +41,23 @@ a {
   &:hover {
     color: @link-color;
   }
+}
+
+a.logo {
+    width: 4.2em;
+    height: 4.2em;
+    display: block;
+    margin: 0 auto;
+    @media only screen and (min-device-width: 400px) {
+      float: left;
+      height: 4.2em;
+      margin: 0;
+    }
+    @media only screen and (min-device-width: 600px) {
+      width: 5em
+      height: 5em;
+      padding: 0 0.1em 0.1em 0;
+    }
 }
 
 p {
@@ -201,12 +224,6 @@ img.attachment-article-post-thumbnail {
   width: 100%;
 }
 
-#header {
-  padding: lem;
-  border-bottom:0.063rem solid rgba(0,0,0,0.2);
-  overflow: hidden;
-}
-
 .container {
   margin: 0 auto;
   max-width: 120.0rem;
@@ -215,49 +232,52 @@ img.attachment-article-post-thumbnail {
   padding-right: 2.0rem;
 }
 
-.navigation {
-  height: 6.0rem;
-  width: 100%;
-  a {
-    display: inline;
-    font-size: 1.6rem;
-    text-transform: uppercase;
-    line-height: 6.0rem;
-    letter-spacing: 0.1rem;
-    @media only screen and (min-device-width: 320px) and (max-device-width: 768px) {
-      font-size: 1.6rem;
-    }
+#header {
+  padding: 1em;
+  border-bottom: 0.063rem solid rgba(0,0,0,0.2);
+  overflow: hidden;
+  font-family: "colfax-web", sans-serif;
+  font-weight: 700;
+  line-height: 1;
+  font-size: .78rem;
+  @media only screen and (min-device-width: 600px) {
+    padding: 1.125em 2em 1.125em 1.5em;
   }
+  @media only screen and (min-device-width: 800px) {
+    padding: 1.125em 3em 1.125em 1.5em;
+    border-bottom: none;
+    font-size: .813rem;
+  }
+  @media only screen and (min-device-width: 1250px) {
+    font-size: 0.875rem;
+  }
+}
+
+#navigation {
   ul {
-    list-style: none;
-    margin-bottom: 0;
-    margin-top: 0;
-    float: right;
+    margin: 1.8em 0 0;
+    text-align: center;
+    padding-left: 0;
     li {
-      float: left;
-      margin: 0;
-      position: relative;
+      display: inline;
+      margin-right: 0.875em;
+      text-transform: uppercase;
+      font-weight: 600;
+      letter-spacing: 0.03em;
       a {
         margin-left: 1.0rem;
         margin-right: 1.0rem;
       }
-      @media only screen and (min-device-width: 320px) and (max-device-width: 768px) {
-        float: none !important;
+      @media only screen and (min-device-width: 600px) {
+        margin-right: 1.3em;
       }
     }
-    @media only screen and (min-device-width: 320px) and (max-device-width: 768px) {
-      visibility: hidden;
-      opacity: 0;
-      max-height: 0;
-      z-index: 5;
-      top: 5rem;
-      right: 0;
-      width: 100%;
-      position: absolute;
-      background-color: rgba(254, 254, 254, 0.98);
-      padding: 0;
-      border-bottom: solid 2px #E2DFE1;
-      transition: opacity 0.25s, max-height 0.15s linear;
+    @media only screen and (min-device-width: 400px) {
+      float: right;
+      margin-top: 1.7em;
+    }
+    @media only screen and (min-device-width: 600px) {
+      margin-top: 2.075em;
     }
   }
 }
